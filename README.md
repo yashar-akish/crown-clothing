@@ -3,5 +3,5 @@ React E-commerce app
 
 #
 
-npm instal
+npm install
 npm start

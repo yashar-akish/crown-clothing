@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import './menu-item.styles.scss';
 
-const MenuItem = ({title, imageUrl, size, linkUrl, match }) =>  {
+const MenuItem = ({title, imageUrl, size, linkUrl }) =>  {
 
   const navigate = useNavigate();
   const { pathname } = useLocation();

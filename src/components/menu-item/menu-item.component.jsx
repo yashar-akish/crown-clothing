@@ -1,13 +1,18 @@
 import React from 'react';
 
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 import './menu-item.styles.scss';
 
-const MenuItem = ({title, imageUrl, size}) =>  {
+const MenuItem = ({title, imageUrl, size, linkUrl, match }) =>  {
+
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   return(
     <div
-      className={`${size} menu-item`}
+      className={`${size} menu-item`} onClick={() => navigate(`${pathname}${linkUrl}`)}
       > 
       {/* the way we use to apply css style dynamically in react javascript, using ` and url()
       applying two different class css */}
